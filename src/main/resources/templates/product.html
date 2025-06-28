@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product - Groundnut Oil</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #f0f0f0;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .footer {
+            background-color: #3e3f1c;
+        }
+
+        .footer a {
+            color: #f0f0f0;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .section-title {
+            color: #e8d48c;
+        }
+
+        .btn-outline-light:hover {
+            background-color: #e8d48c;
+            color: black;
+        }
+
+        .custom-navbar {
+            background: linear-gradient(to right, #3b3a2e, #4d4c3b);
+            border-bottom: 1px solid rgba(218, 165, 32, 0.3);
+        }
+
+        .custom-navbar .navbar-brand {
+            color: #daa520 !important;
+            letter-spacing: 0.5px;
+        }
+
+        .custom-navbar .nav-link {
+            color: #f8f9fa !important;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .custom-navbar .nav-link:hover {
+            color: #daa520 !important;
+            transform: translateY(-2px);
+        }
+
+        .custom-navbar .navbar-toggler {
+            border-color: #daa520;
+        }
+
+        .custom-navbar .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28218, 165, 32, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+
+        @media (max-width: 991px) {
+            .custom-navbar .navbar-collapse {
+                background-color: #2c2b24;
+                padding: 1rem;
+                border-radius: 0.5rem;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top shadow">
+    <div class="container">
+        <a class="navbar-brand fs-3 fw-semibold" href="/"><i class="bi bi-droplet-half me-2"></i>Vandan Groundnut Oil</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+            <ul class="navbar-nav gap-3">
+                <li class="nav-item">
+                    <a class="nav-link fs-5" href="/product"><i class="bi bi-box-seam me-1"></i>Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fs-5" href="/enquiry"><i class="bi bi-envelope me-1"></i>Enquiry</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fs-5" href="/about"><i class="bi bi-info-circle me-1"></i>About Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Product Header -->
+<div class="container mt-5 text-center">
+    <h1 class="section-title mb-3" th:text="${product}">Groundnut Oil</h1>
+    <h2 class="mb-3"><i class="bi bi-droplet-fill text-warning me-2"></i>Product Details</h2>
+    <p class="lead">100% Pure, double filtered Groundnut Oil</p>
+    <img src="/images/Oil.jpg" alt="Oil" class="img-fluid rounded shadow" style="max-height: 350px;">
+</div>
+
+<!-- Sizes & Prices -->
+<div class="container my-5">
+    <h3 class="section-title mb-4"><i class="bi bi-currency-rupee"></i> Available Sizes & Prices</h3>
+    <div class="table-responsive">
+        <table class="table table-dark table-bordered table-striped border-light text-center align-middle">
+            <thead class="table-light text-dark">
+                <tr>
+                    <th>Size</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>500 ml</td>
+                    <td>₹120</td>
+                </tr>
+                <tr>
+                    <td>1 litre</td>
+                    <td>₹230</td>
+                </tr>
+                <tr>
+                    <td>5 litres</td>
+                    <td>₹1100</td>
+                </tr>
+                <tr>
+                    <td>10 litres</td>
+                    <td>₹2100</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer text-white text-center py-4 mt-5">
+    <p>
+        <i class="bi bi-telephone"></i>
+        <a href="tel:+918735070617">+91-8735070617</a> |
+        <i class="bi bi-telephone"></i>
+        <a href="tel:+919428919992">+91-9428919992</a>
+        <br>
+        <i class="bi bi-envelope-fill"></i>
+        <a href="mailto:info@groundnutoil.com">info@groundnutoil.com</a> |
+        <i class="bi bi-envelope-fill"></i>
+        <a href="mailto:support@groundnutoil.com">support@groundnutoil.com</a>
+    </p>
+    <p>
+        <i class="bi bi-instagram"></i>
+        <a href="https://www.instagram.com/puregroundnutoil" target="_blank">Follow us @puregroundnutoil</a>
+    </p>
+</footer>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
